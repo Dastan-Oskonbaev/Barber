@@ -217,3 +217,4 @@ DJANGO_REST_PASSWORDRESET_TOKEN_CONFIG = {
 
 with contextlib.suppress(ImportError):
     from .local_settings import *
+# dastan
