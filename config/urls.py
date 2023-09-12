@@ -39,6 +39,7 @@ api_v1_patterns = [
     path('auth/', include(auth_patterns)),
     path('schema/', include(swagger_patterns)),
     path('accounts/', include('apps.accounts.urls')),
+    path('cities/', include('apps.cities.urls')),
 ]
 
 urlpatterns = [

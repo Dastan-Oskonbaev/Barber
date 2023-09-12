@@ -71,6 +71,7 @@ class BarberSerializer(serializers.ModelSerializer):
             'work_time_to',
             'work_type',
             'languages',
+            'city',
         )
 
 

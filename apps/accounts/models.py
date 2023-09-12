@@ -6,6 +6,7 @@ from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 
 from .constants import Experience, WorkType
+from apps.cities.models import City
 
 
 class CustomUser(AbstractUser):
@@ -114,7 +115,14 @@ class Barber(AbstractUser):
         null=True,
         blank=True,
     )
-
+    city = models.ForeignKey(
+        City,
+        on_delete=models.DO_NOTHING,
+        verbose_name=_('City'),
+        related_name='barber',
+        null=True,
+        blank=True,
+    )
     groups = models.ManyToManyField(
         Group,
         verbose_name=_("groups"),

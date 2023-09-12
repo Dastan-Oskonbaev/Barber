@@ -91,6 +91,7 @@ class BarberAdmin(UserAdmin):
             "work_time_to",
             "work_type",
             "languages",
+            "city",
             )}),
         (
             _("Permissions"),
