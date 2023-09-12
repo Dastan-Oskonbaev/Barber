@@ -48,6 +48,7 @@ THIRD_PARTY_APPS = [
     'drf_spectacular',
     'mptt',
     'django_rest_passwordreset',
+    'django_filters',
 ]
 
 INSTALLED_APPS = [

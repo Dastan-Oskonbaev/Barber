@@ -1,9 +1,10 @@
-from django.shortcuts import render
-
 from rest_framework import viewsets, generics, permissions
+
+from django_filters.rest_framework import DjangoFilterBackend
 
 from .models import CustomUser, Barber, Profession, District, Language
 from .permissions import IsOwnerOrReadOnly
+from .filters import BarberFilter
 from .serializers import (
     CustomUserSerializer,
     CustomUserUpdateSerializer,
@@ -30,6 +31,8 @@ class BarberViewSet(viewsets.ModelViewSet):
     queryset = Barber.objects.all()
     serializer_class = BarberSerializer
     permission_classes = [IsOwnerOrReadOnly]
+    filter_backends = [DjangoFilterBackend]
+    filterset_class = BarberFilter
 
     def get_serializer_class(self):
         if self.action == 'create':
