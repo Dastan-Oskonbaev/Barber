@@ -41,6 +41,7 @@ api_v1_patterns = [
     path('accounts/', include('apps.accounts.urls')),
     path('cities/', include('apps.cities.urls')),
     path('contacts/', include('apps.contacts.urls')),
+    path('blog/', include('apps.blog.urls')),
 ]
 
 urlpatterns = [

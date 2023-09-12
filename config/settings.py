@@ -38,6 +38,7 @@ MY_APPS = [
     'apps.accounts',
     'apps.cities',
     'apps.contacts',
+    'apps.blog',
 ]
 
 THIRD_PARTY_APPS = [
