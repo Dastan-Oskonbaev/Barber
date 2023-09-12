@@ -40,6 +40,7 @@ api_v1_patterns = [
     path('schema/', include(swagger_patterns)),
     path('accounts/', include('apps.accounts.urls')),
     path('cities/', include('apps.cities.urls')),
+    path('contacts/', include('apps.contacts.urls')),
 ]
 
 urlpatterns = [

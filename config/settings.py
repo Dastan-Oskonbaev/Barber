@@ -37,6 +37,7 @@ ALLOWED_HOSTS = env_config('ALLOWED_HOSTS').split(',')
 MY_APPS = [
     'apps.accounts',
     'apps.cities',
+    'apps.contacts',
 ]
 
 THIRD_PARTY_APPS = [
