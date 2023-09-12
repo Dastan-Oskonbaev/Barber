@@ -34,12 +34,13 @@ ALLOWED_HOSTS = env_config('ALLOWED_HOSTS').split(',')
 
 
 # Application definition
-MY_APPS = []
+MY_APPS = [
+    'apps.accounts',
+]
 
 THIRD_PARTY_APPS = [
     'corsheaders',
     'phonenumber_field',
-    'django_filters',
     'rest_framework',
     'drf_spectacular',
     'mptt',
@@ -47,7 +48,6 @@ THIRD_PARTY_APPS = [
 ]
 
 INSTALLED_APPS = [
-    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -87,7 +87,6 @@ TEMPLATES = [
     },
 ]
 
-ASGI_APPLICATION = 'config.asgi.application'
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
@@ -174,9 +173,17 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    # 'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10,
+}
+
+# drf_spectacular config
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Barbershops API',
+    # 'DESCRIPTION': 'Your project description',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
 }
 
 # JWT
