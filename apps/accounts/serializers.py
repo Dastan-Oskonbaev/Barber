@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import CustomUser, Barber, Profession, District, Language
+from .models import CustomUser, Barber, Profession, District, Language, Portfolio
 
 
 class CustomUserSerializer(serializers.ModelSerializer):
@@ -55,7 +55,15 @@ class BarberCreateSerializer(serializers.ModelSerializer):
         return user
 
 
+class PortfolioSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Portfolio
+        fields = '__all__'
+
+
 class BarberSerializer(serializers.ModelSerializer):
+    portfolio = PortfolioSerializer(many=True, read_only=True)
+
     class Meta:
         model = Barber
         fields = (
@@ -72,6 +80,8 @@ class BarberSerializer(serializers.ModelSerializer):
             'work_type',
             'languages',
             'city',
+            'photo',
+            'portfolio',
         )
 
 

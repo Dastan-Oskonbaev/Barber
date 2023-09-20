@@ -123,6 +123,12 @@ class Barber(AbstractUser):
         null=True,
         blank=True,
     )
+    photo = models.ImageField(
+        _('Photo'),
+        upload_to='barber/',
+        null=True,
+        blank=True,
+    )
     groups = models.ManyToManyField(
         Group,
         verbose_name=_("groups"),
@@ -149,3 +155,23 @@ class Barber(AbstractUser):
     class Meta:
         verbose_name = _('Barber')
         verbose_name_plural = _('Barbers')
+
+
+class Portfolio(models.Model):
+    file = models.FileField(
+        _('File'),
+        upload_to='portfolio/',
+    )
+    barber = models.ForeignKey(
+        Barber,
+        on_delete=models.CASCADE,
+        verbose_name=_('Barber'),
+        related_name='portfolio',
+    )
+
+    def __str__(self):
+        return self.barber.username
+
+    class Meta:
+        verbose_name = _('Portfolio')
+        verbose_name_plural = _('Portfolio')

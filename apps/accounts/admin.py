@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
 
-from .models import CustomUser, Barber, Profession, District, Language
+from .models import CustomUser, Barber, Profession, District, Language, Portfolio
 
 
 @admin.register(CustomUser)
@@ -92,6 +92,7 @@ class BarberAdmin(UserAdmin):
             "work_type",
             "languages",
             "city",
+            "photo",
             )}),
         (
             _("Permissions"),
@@ -152,4 +153,21 @@ class LanguageAdmin(admin.ModelAdmin):
     search_fields = (
         'id',
         'name',
+    )
+
+
+@admin.register(Portfolio)
+class PortfolioAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'barber',
+        'file',
+    )
+    list_display_links = (
+        'barber',
+    )
+    search_fields = (
+        'id',
+        'barber',
+        'file',
     )

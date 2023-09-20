@@ -1,12 +1,19 @@
 from rest_framework import serializers
 
 from .models import Favorite, FavoriteItem
+from apps.accounts.serializers import BarberSerializer
 
 
 class FavoriteItemSerializer(serializers.ModelSerializer):
+    barber = BarberSerializer(read_only=True)
+
     class Meta:
         model = FavoriteItem
-        fields = '__all__'
+        fields = (
+            'id',
+            'favorite',
+            'barber',
+        )
 
 
 class FavoriteSerializer(serializers.ModelSerializer):

@@ -8,12 +8,14 @@ from .views import (
     ProfessionListAPIView,
     DistrictListAPIView,
     LanguageListAPIView,
+    PortfolioViewSet,
 )
 
 router = routers.DefaultRouter()
 
 router.register(r'users', CustomUserViewSet, basename='users')
 router.register(r'barbers', BarberViewSet, basename='barbers')
+router.register(r'portfolio', PortfolioViewSet, basename='portfolio')
 
 urlpatterns = [
     path('password-reset/', include('django_rest_passwordreset.urls', namespace='password_reset')),
