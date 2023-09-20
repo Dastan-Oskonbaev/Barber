@@ -43,6 +43,7 @@ api_v1_patterns = [
     path('contacts/', include('apps.contacts.urls')),
     path('blog/', include('apps.blog.urls')),
     path('favorite/', include('apps.favorite.urls')),
+    path('review/', include('apps.review.urls')),
 ]
 
 urlpatterns = [

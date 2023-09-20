@@ -93,6 +93,7 @@ class BarberAdmin(UserAdmin):
             "languages",
             "city",
             "photo",
+            "average_rating",
             )}),
         (
             _("Permissions"),

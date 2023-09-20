@@ -40,6 +40,7 @@ MY_APPS = [
     'apps.contacts',
     'apps.blog',
     'apps.favorite',
+    'apps.review',
 ]
 
 THIRD_PARTY_APPS = [

@@ -82,6 +82,7 @@ class BarberSerializer(serializers.ModelSerializer):
             'city',
             'photo',
             'portfolio',
+            'average_rating',
         )
 
 

@@ -129,6 +129,12 @@ class Barber(AbstractUser):
         null=True,
         blank=True,
     )
+    average_rating = models.DecimalField(
+        _('Average Rating'),
+        max_digits=3,
+        decimal_places=2,
+        default=0,
+    )
     groups = models.ManyToManyField(
         Group,
         verbose_name=_("groups"),
