@@ -9,4 +9,5 @@ class BarberFilter(FilterSet):
         fields = {
             'district': ['exact'],
             'experience': ['exact'],
+            'work_type': ['exact'],
         }
