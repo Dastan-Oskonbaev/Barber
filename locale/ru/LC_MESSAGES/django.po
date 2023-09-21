@@ -1,0 +1,294 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-21 15:29+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: apps/accounts/admin.py:33 apps/accounts/admin.py:81
+msgid "Personal info"
+msgstr "Персональная информация"
+
+#: apps/accounts/admin.py:40 apps/accounts/admin.py:101
+msgid "Permissions"
+msgstr "Права"
+
+#: apps/accounts/admin.py:51 apps/accounts/admin.py:112
+msgid "Important dates"
+msgstr "Важные даты"
+
+#: apps/accounts/apps.py:8
+msgid "Account"
+msgstr "Учетная запись"
+
+#: apps/accounts/apps.py:9
+msgid "Accounts"
+msgstr "Учетные записи"
+
+#: apps/accounts/constants.py:6
+msgid "Intern"
+msgstr "Стажер"
+
+#: apps/accounts/constants.py:7
+msgid "Six month"
+msgstr "6 месяцев"
+
+#: apps/accounts/constants.py:8
+msgid "One year"
+msgstr "1 год"
+
+#: apps/accounts/constants.py:9
+msgid "Three year"
+msgstr "3 года"
+
+#: apps/accounts/constants.py:10
+msgid "Five year"
+msgstr "5 лет"
+
+#: apps/accounts/constants.py:11
+msgid "Master"
+msgstr "Опытный"
+
+#: apps/accounts/constants.py:15
+msgid "Salon"
+msgstr "Салон"
+
+#: apps/accounts/constants.py:16
+msgid "Private master"
+msgstr "Индивидуальный мастер"
+
+#: apps/accounts/models.py:14 apps/accounts/models.py:134
+msgid "Photo"
+msgstr "Фото"
+
+#: apps/accounts/models.py:24 apps/favorite/models.py:11
+#: apps/review/models.py:11
+msgid "User"
+msgstr "Пользователь"
+
+#: apps/accounts/models.py:25
+msgid "Users"
+msgstr "Пользователи"
+
+#: apps/accounts/models.py:30 apps/accounts/models.py:44
+#: apps/accounts/models.py:58 apps/accounts/models.py:204 apps/blog/models.py:7
+#: apps/blog/models.py:31 apps/cities/models.py:7 apps/contacts/models.py:7
+msgid "Name"
+msgstr "Название"
+
+#: apps/accounts/models.py:38 apps/accounts/models.py:74
+msgid "Profession"
+msgstr "Профессия"
+
+#: apps/accounts/models.py:39
+msgid "Professions"
+msgstr "Профессии"
+
+#: apps/accounts/models.py:52 apps/accounts/models.py:92
+msgid "District"
+msgstr "Район"
+
+#: apps/accounts/models.py:53
+msgid "Districts"
+msgstr "Районы"
+
+#: apps/accounts/models.py:66
+msgid "Language"
+msgstr "Язык"
+
+#: apps/accounts/models.py:67 apps/accounts/models.py:117
+msgid "Languages"
+msgstr "Языки"
+
+#: apps/accounts/models.py:79
+msgid "Experience"
+msgstr "Опыт работы"
+
+#: apps/accounts/models.py:85
+msgid "About me"
+msgstr "О себе"
+
+#: apps/accounts/models.py:97
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#: apps/accounts/models.py:102
+msgid "Work time from"
+msgstr "Время работы от"
+
+#: apps/accounts/models.py:106
+msgid "Work time to"
+msgstr "Время работы до"
+
+#: apps/accounts/models.py:110
+msgid "Work type"
+msgstr "Место работы"
+
+#: apps/accounts/models.py:120
+msgid "Address"
+msgstr "Адрес"
+
+#: apps/accounts/models.py:128 apps/cities/apps.py:8 apps/cities/models.py:19
+msgid "City"
+msgstr "Город"
+
+#: apps/accounts/models.py:140
+msgid "Average Rating"
+msgstr "Средний рейтинг"
+
+#: apps/accounts/models.py:146
+msgid "Update date"
+msgstr "Дата обновления"
+
+#: apps/accounts/models.py:150 apps/blog/models.py:53 apps/blog/models.py:66
+msgid "Description"
+msgstr "Описание"
+
+#: apps/accounts/models.py:156
+msgid "groups"
+msgstr "группы"
+
+#: apps/accounts/models.py:159
+msgid ""
+"The groups this user belongs to. A user will get all permissions granted to "
+"each of their groups."
+msgstr ""
+
+#: apps/accounts/models.py:167
+msgid "user permissions"
+msgstr "права пользователя"
+
+#: apps/accounts/models.py:169
+msgid "Specific permissions for this user."
+msgstr "Определенные разрешения для этого пользователя."
+
+#: apps/accounts/models.py:178 apps/accounts/models.py:190
+#: apps/accounts/models.py:214 apps/favorite/models.py:32
+#: apps/review/models.py:17
+msgid "Barber"
+msgstr "Барбер"
+
+#: apps/accounts/models.py:179
+msgid "Barbers"
+msgstr "Барберы"
+
+#: apps/accounts/models.py:184
+msgid "File"
+msgstr "Файл"
+
+#: apps/accounts/models.py:198 apps/accounts/models.py:199
+msgid "Portfolio"
+msgstr "Портфолио"
+
+#: apps/accounts/models.py:208
+msgid "Price"
+msgstr "Цена"
+
+#: apps/accounts/models.py:222
+msgid "Service"
+msgstr "Услуга"
+
+#: apps/accounts/models.py:223
+msgid "Services"
+msgstr "Услуги"
+
+#: apps/blog/apps.py:8 apps/blog/models.py:43 apps/blog/models.py:58
+msgid "Blog"
+msgstr "Блог"
+
+#: apps/blog/apps.py:9 apps/blog/models.py:44
+msgid "Blogs"
+msgstr "Блоги"
+
+#: apps/blog/models.py:15 apps/blog/models.py:23
+msgid "Category"
+msgstr "Категория"
+
+#: apps/blog/models.py:16
+msgid "Categories"
+msgstr "Категории"
+
+#: apps/blog/models.py:27 apps/review/models.py:35
+msgid "Date"
+msgstr "Дата"
+
+#: apps/blog/models.py:35 apps/cities/models.py:11
+msgid "Image"
+msgstr "Изображение"
+
+#: apps/blog/models.py:49
+msgid "Title"
+msgstr "Заголовок"
+
+#: apps/blog/models.py:67
+msgid "Descriptions"
+msgstr "Описание"
+
+#: apps/cities/apps.py:9 apps/cities/models.py:20
+msgid "Cities"
+msgstr "Города"
+
+#: apps/contacts/apps.py:8 apps/contacts/models.py:11
+#: apps/contacts/models.py:19
+msgid "Contact"
+msgstr "Контакт"
+
+#: apps/contacts/apps.py:9 apps/contacts/models.py:20
+msgid "Contacts"
+msgstr "Контакты"
+
+#: apps/favorite/apps.py:8 apps/favorite/models.py:18
+#: apps/favorite/models.py:26
+msgid "Favorite"
+msgstr "Избранное"
+
+#: apps/favorite/apps.py:9 apps/favorite/models.py:19
+msgid "Favorites"
+msgstr "Избранные"
+
+#: apps/favorite/models.py:39
+msgid "Favorite item"
+msgstr "Избранный предмет"
+
+#: apps/favorite/models.py:40
+msgid "Favorite items"
+msgstr "Избранные предметы"
+
+#: apps/review/apps.py:8 apps/review/models.py:43
+msgid "Review"
+msgstr "Отзыв"
+
+#: apps/review/apps.py:9 apps/review/models.py:44
+msgid "Reviews"
+msgstr "Отзывы"
+
+#: apps/review/models.py:21
+msgid "Text"
+msgstr "Текст"
+
+#: apps/review/models.py:24
+msgid "Rating"
+msgstr "Рейтинг"
+
+#: config/settings.py:147
+msgid "Russian"
+msgstr "Русский"
+
+#: config/settings.py:148
+msgid "English"
+msgstr "English"
