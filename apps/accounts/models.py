@@ -10,6 +10,13 @@ from apps.cities.models import City
 
 
 class CustomUser(AbstractUser):
+    photo = models.ImageField(
+        _('Photo'),
+        upload_to='users/',
+        null=True,
+        blank=True,
+    )
+
     def __str__(self) -> str:
         return self.username
     
@@ -135,6 +142,15 @@ class Barber(AbstractUser):
         decimal_places=2,
         default=0,
     )
+    update_date = models.DateField(
+        _('Update date'),
+        auto_now=True,
+    )
+    description = models.TextField(
+        _('Description'),
+        null=True,
+        blank=True,
+    )
     groups = models.ManyToManyField(
         Group,
         verbose_name=_("groups"),
@@ -181,3 +197,27 @@ class Portfolio(models.Model):
     class Meta:
         verbose_name = _('Portfolio')
         verbose_name_plural = _('Portfolio')
+
+
+class Service(models.Model):
+    name = models.CharField(
+        _('Name'),
+        max_length=255,
+    )
+    price = models.PositiveIntegerField(
+        _('Price'),
+        default=0,
+    )
+    barber = models.ForeignKey(
+        Barber,
+        on_delete=models.CASCADE,
+        verbose_name=_('Barber'),
+        related_name='service',
+    )
+
+    def __str__(self):
+        return f'{self.name} - {self.price}'
+
+    class Meta:
+        verbose_name = _('Service')
+        verbose_name_plural = _('Services')

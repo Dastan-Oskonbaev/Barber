@@ -2,7 +2,7 @@ from rest_framework import viewsets, generics, permissions
 
 from django_filters.rest_framework import DjangoFilterBackend
 
-from .models import CustomUser, Barber, Profession, District, Language, Portfolio
+from .models import CustomUser, Barber, Profession, District, Language, Portfolio, Service
 from .permissions import IsOwnerOrReadOnly
 from .filters import BarberFilter
 from .serializers import (
@@ -14,6 +14,7 @@ from .serializers import (
     DistrictSerializer,
     LanguageSerializer,
     PortfolioSerializer,
+    ServiceSerializer,
 )
 
 
@@ -62,4 +63,10 @@ class LanguageListAPIView(generics.ListAPIView):
 class PortfolioViewSet(viewsets.ModelViewSet):
     queryset = Portfolio.objects.all()
     serializer_class = PortfolioSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class ServiceViewSet(viewsets.ModelViewSet):
+    queryset = Service.objects.all()
+    serializer_class = ServiceSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]

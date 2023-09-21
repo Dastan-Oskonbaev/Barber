@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import CustomUser, Barber, Profession, District, Language, Portfolio
+from .models import CustomUser, Barber, Profession, District, Language, Portfolio, Service
 
 
 class CustomUserSerializer(serializers.ModelSerializer):
@@ -31,6 +31,7 @@ class CustomUserUpdateSerializer(serializers.ModelSerializer):
             'id',
             'username',
             'email',
+            'photo',
         )
 
 
@@ -61,8 +62,16 @@ class PortfolioSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class ServiceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Service
+        fields = '__all__'
+
+
 class BarberSerializer(serializers.ModelSerializer):
     portfolio = PortfolioSerializer(many=True, read_only=True)
+    update_date = serializers.ReadOnlyField()
+    service = ServiceSerializer(many=True, read_only=True)
 
     class Meta:
         model = Barber
@@ -83,6 +92,9 @@ class BarberSerializer(serializers.ModelSerializer):
             'photo',
             'portfolio',
             'average_rating',
+            'update_date',
+            'description',
+            'service',
         )
 
 

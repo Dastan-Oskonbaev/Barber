@@ -9,6 +9,7 @@ from .views import (
     DistrictListAPIView,
     LanguageListAPIView,
     PortfolioViewSet,
+    ServiceViewSet,
 )
 
 router = routers.DefaultRouter()
@@ -16,6 +17,7 @@ router = routers.DefaultRouter()
 router.register(r'users', CustomUserViewSet, basename='users')
 router.register(r'barbers', BarberViewSet, basename='barbers')
 router.register(r'portfolio', PortfolioViewSet, basename='portfolio')
+router.register(r'service', ServiceViewSet, basename='service')
 
 urlpatterns = [
     path('password-reset/', include('django_rest_passwordreset.urls', namespace='password_reset')),
