@@ -1,15 +1,17 @@
 from django.contrib import admin
 
+from modeltranslation.admin import TranslationAdmin, TranslationTabularInline
+
 from .models import Category, Blog, Description
 
 
-class DescriptionInline(admin.TabularInline):
+class DescriptionInline(TranslationTabularInline):
     model = Description
     extra = 1
 
 
 @admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(TranslationAdmin):
     list_display = (
         'id',
         'name',
@@ -26,7 +28,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 @admin.register(Blog)
-class BlogAdmin(admin.ModelAdmin):
+class BlogAdmin(TranslationAdmin):
     list_display = (
         'id',
         'name',

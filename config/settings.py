@@ -56,6 +56,7 @@ THIRD_PARTY_APPS = [
 ]
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -148,8 +149,8 @@ LANGUAGES = [
     ('en', _('English')),
 ]
 
-# MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
-# MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'en'
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
+MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'en'
 
 LOCALE_PATHS = [
     BASE_DIR / 'locale',
